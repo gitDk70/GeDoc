@@ -18,8 +18,11 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/home', [DocController::class, 'home']);
-Route::get('/about', [DocController::class, 'about']);
-Route::get('/samplePost', [DocController::class, 'samplePost']);
-Route::get('/contact',[DocController::class,'contact']);
+Route::get('/home',        [DocController::class, 'home']);
+Route::get('/login',       [LoginController::class, 'index']);
+Route::get('/register',    [LoginController::class, 'register']);
+Route::get('/personal',    [DocController::class, 'personal']);
+Route::get('/work',        [DocController::class,'work']);
+Route::get('/contact',     [DocController::class,'contact']);
 Route::post('/contactForm',[DocController::class,'contactForm']);
+Route::get('/about',       [DocController::class, 'about']);
