@@ -24,10 +24,10 @@ class DocController extends Controller
     
         
     public function contact(){
-      return view('contact');
+      return view('contact', ['data[]'=> null]);
     }
     
-    public function contactForm() {
-    
+    public function contactForm(Request $request) {
+      return view('contact', ['data' => $request]);
     }
 }
