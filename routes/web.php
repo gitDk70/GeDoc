@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DocController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home',        [DocController::class, 'home']);
-Route::get('/login',       [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index']);
 Route::get('/register',    [LoginController::class, 'register']);
 Route::get('/personal',    [DocController::class, 'personal']);
 Route::get('/work',        [DocController::class,'work']);
